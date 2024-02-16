@@ -1,0 +1,36 @@
+<!-- Footer -->
+<footer class="site-footer theme-dark">
+    <div class="content">
+        <div class="footer-rights">
+            <p class="text-center">Copyright © 2014-<span id="thisYear"></span> LXYTech Inc. All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+
+<script src="{{ site.url }}/js/foundation.min.js?v={{site.version}}"></script>
+<script src="{{ site.url }}/js/app.js?v={{site.version}}"></script>
+
+<!--访问LeanCloud的js包装脚本-->
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<!--引入页面浏览量统计第三方脚本-->
+<script src="https://thinktxt.static.lxyour.com/js/hit-kounter-lc-0.3.0.js"></script>
+
+<script>
+  /* Copyright Year */
+  (function () {
+    var date = new Date();
+    var thisYear = date.getFullYear();
+    $('#thisYear').text(thisYear);
+  })();
+
+  /* Baidu Total */
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?5be4a23cbd9cf916435835afbf30c09f";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+<span class="hide"><script src="https://s4.cnzz.com/z_stat.php?id=1261194828&web_id=1261194828"></script></span>
+<!-- End Footer -->

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content='{{ page.title }} - {{ site.title }}' name='title' />
+    <meta content='{{ page.title }} - {{ site.title }}' name='og:title' />
+    <title>{{ page.title }} - {{ site.title }}</title>
+    {% include head.html %}
+</head>
+
+<body class="blog">
+    <div class="preloader">
+        <div class="preload-status">&nbsp;</div>
+    </div>
+    <div class="wrap">
+        <!-- Header -->
+        {% include header.html %}
+        <!-- End Header -->
+        <!-- Main Page Content and Sidebar -->
+        <div class="main-part">
+            <div class="content theme-tint">
+                <div class="mode-container nine columns">
+                    <article class="article">
+                        <h2 class="columns-title">
+                          <span>{{page.title}}</span>
+                        </h2>
+                        {{content}}
+                    </article>
+                </div>
+                <div class="sider-bar"></div>
+            </div>
+        </div>
+        <!-- End Main Page Content and Sidebar -->
+        <!-- Footer -->
+        {% include footer.html %}
+        <!-- End Footer -->
+    </div>
+</body>
+
+</html>

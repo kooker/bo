@@ -1,0 +1,66 @@
+title:            Hi kooker
+description:      吃饱饭，干好活。
+author:           kooker
+url:              https://bo.kooker.jp    # with the https protocol
+cdn:              https://thinktxt.static.lxyour.com
+
+links:
+  - name:         首页
+    url:          /
+  - name:         文章
+    url:          /list.html
+  - name:         分类
+    url:          /categories.html
+  - name:         标签
+    url:          /tags.html
+  - name:         归档
+    url:          /archives.html
+  - name:         关于我
+    url:          /about
+
+
+gems: [jekyll-paginate]
+
+# pagination
+paginate: 10 # 指定每页多少条
+paginate_path: "page/:num" # 指定每页的url
+
+future: true
+excerpt_separator: "\n\n" # you can specify your own separator here, default is "\n\n" String
+permalink:        date
+
+
+lean_cloud :
+  app_id   :  OHfvrRyQ0YYxyATE5e7x23dE-gzGzoHsz
+  app_key  :  1lxnbiT3kGgVVgGwifpk9USX
+
+
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  input:          GFM
+  hard_wrap: true # a newline in markdown text would be changed to <br>
+  syntax_highlighter: rouge
+  toc_levels: 1..6
+
+  # Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
+  # span, block element options fall back to global
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: 'highlight'
+    #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
+
+
+version: 1.3.2
+
+
+exclude:
+    - Gemfile
+    - Gemfile.lock
+    - LICENSE
+    - README.md
+    - CNAME

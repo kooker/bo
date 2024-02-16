@@ -1,0 +1,24 @@
+<header class="site-header theme-dark">
+    <div class="content hd-height">
+        <div class="hd-brand">
+            <div class="hd-logo">
+                <a href="{{ site.url }}"><img class="img-logo" src="{{site.cdn}}/images/lxylogo.jpg?imageMogr2/thumbnail/!160x160r"></a>
+            </div>
+            <div class="hd-text">
+                <p class="title"><a href="{{ site.url }}">{{ site.title }}</a></p>
+                <p class="slogan">{{ site.description }}</p>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <ul id="themenu" class="nav-bar">
+                {% for link in site.links %}
+                <li>
+                    <a class="nav-link" target="{% if link.external %}_blank{% else %}_top{% endif %}" href="{% unless link.external %}{{ site.url }}{% endunless %}{{ link.url }}">
+                     {{ link.name }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>

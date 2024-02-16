@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ site.title }} - {{ site.description }}</title>
+    {% include head.html %}
+  </head>
+  <body class="blog">
+  	<div class="preloader">
+    		<div class="preload-status"></div>
+  	</div>
+  	<div class="wrap">
+        <!-- Header -->
+        {% include header.html %}
+        <!-- End Header -->
+        <!-- Main Page Content and Sidebar -->
+        <div class="main-part">
+            <div class="content theme-tint">
+                <div class="mode-container nine columns">
+                    <!-- List -->
+                    {{content}}
+                    <!-- End List -->
+                </div>
+                <div class="sider-bar"></div>
+            </div>
+        </div>
+        <!-- End Main Page Content and Sidebar -->
+        <!-- Footer -->
+        {% include footer.html %}
+        <!-- End Footer -->
+    </div>
+  </body>
+</html>
